@@ -1,13 +1,64 @@
 ﻿/*chapter 4*/
 
-body {
-	font:sans-serif;
+* {
+	font-family: sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-size:large;
+
+h1 {
+	font-size: 250%;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3 {
+	font-size: 125%;
 }
 
 
-main:h1::first-letter {
-	font-size:larger
+
+#body-header::first-letter {
+	font-size: 200%;
+}
+
+#home-page-pumpkin {
+	float:left;
+}
+
+header {
+	text-indent:2em;
+}
+
+#main-header {
+	text-shadow: 2px 2px #000000;
+	font-style: italic;
+	color: #FF6600;
+}
+
+a:link {
+	color: #FF6600;
+	font-weight: bold;
+}
+
+a:visited {
+	color:blue;
+	font-weight: bold;
+}
+
+a:hover {
+	color:green;
+}
+
+a:focus {
+	color:green;
+}
+
+ul li {
+	padding: 5px;
+}
+
+footer {
+	font-size:60%;
+	text-align:center;
 }
