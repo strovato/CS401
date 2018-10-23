@@ -21,6 +21,10 @@ header {
 	
 }
 
+#welcome-message::first-letter {
+	font-size: 200%;
+	padding: auto;
+}
 
 section {
 	border-top: 2px solid black;
