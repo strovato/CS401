@@ -1,0 +1,78 @@
+﻿/*chapter 9*/
+
+* {
+	font-family: sans-serif;
+}
+
+html {
+	background-image: url(../images/bats.gif);
+
+}
+
+
+#menu {
+	
+	display: none;
+
+}
+
+
+#side-menu {
+	
+	display: none;
+
+}
+
+#header {
+	
+	display: none;
+
+}
+
+
+video {
+	
+	display: none;
+
+}
+
+section h2:first-of-type {
+	
+	display: none;
+
+}
+
+p {
+	font-family: serif;
+}
+
+h2 {
+	font-family: sans-serif;
+	border-bottom: 3px solid black;
+}
+
+footer {
+	
+	display: none;
+}
+
+body {
+	box-shadow: none;
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
