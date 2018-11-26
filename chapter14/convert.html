@@ -1,0 +1,33 @@
+<head>
+    <title>Convert temperature</title>
+    <script>
+        
+        
+
+        do {
+                var t = prompt ("Enter Fahrenheit");
+                t = parseFloat(t);
+                if (t == 999) {
+                    //escape condition
+                }else if (isNaN(t)) {
+                    alert("Please enter a numeric");
+                } else if (t < -100 || t > 212) {
+                    alert("You entered " + t + ".\nEntry must range from -100 to +212.");
+                } else {
+                    var f = (t - 32) * (5/9);
+                    if (Math.abs(f % 1) > 0) {
+                        f = f.toFixed(2);
+                    }
+                    alert("Fahrenheit temperature is " + t + "\n\nCelsius temperature is " + f);
+                }
+            } while (t != 999);    
+        
+      
+        
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Thank you for using the temperature converter.</h1>
+    </main>
+</body>
