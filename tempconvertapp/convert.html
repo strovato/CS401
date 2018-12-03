@@ -9,12 +9,12 @@
             return document.getElementById(id);
         };
         var convertCF = function (celsius) {
-            var fahrenheit = (celsius - 32) * (5/9);
+            var fahrenheit = ((celsius * (9/5)) + 32);
             fahrenheit = fahrenheit.toFixed(1);
             return fahrenheit;
         };
         var convertFC = function (fahrenheit) {
-            var celsius = ((fahrenheit * (9/5)) + 32);
+            var celsius = (fahrenheit - 32) * (5/9);
             celsius = celsius.toFixed(1);
             return celsius;
         };
@@ -35,8 +35,8 @@
             }
         };
         window.onload = function() {
-            $("convertC").onclick = processC();
-            $("convertF").onclick = processF();
+            $("convertC").onclick = processC;
+            $("convertF").onclick = processF;
             $("fahrenheit").focus();
         };    
     </script>
@@ -44,6 +44,8 @@
 <body>
     <main>
         <h1>Convert temperatures</h1>
+        <input type="radio" name="convertdirection" id="text" value="text" checked>Fahrenheit to Celsius<br>
+        <input type="radio" name="convertdirection" id="text" value="text">Celsius to Fahrenheit<br> 
         <label for="fahrenheit">Enter F degrees:</label>
         <input type="text" id="fahrenheit"><br>
         <label for="convertedF">Degrees Celsius:</label>
