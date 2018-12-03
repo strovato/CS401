@@ -1,0 +1,74 @@
+<head>
+    <title>Convert temperature</title>
+    
+    <link rel="stylesheet" href="styles/convert.css">
+    
+    <script>
+        "use strict";
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+        var convertCF = function (celsius) {
+            var fahrenheit = (celsius - 32) * (5/9);
+            fahrenheit = fahrenheit.toFixed(1);
+            return fahrenheit;
+        };
+        var convertFC = function (fahrenheit) {
+            var celsius = ((fahrenheit * (9/5)) + 32);
+            celsius = celsius.toFixed(1);
+            return celsius;
+        };
+        var processF = function() {
+            var temp = parseFloat($("fahrenheit").value);
+            if (isNaN(temp)) {
+                alert("Please enter a number");
+            } else {
+                $("convertedF").value = convertFC(temp);
+            }
+        };
+        var processC = function() {
+            var temp = parseFloat($("celsius").value);
+            if (isNaN(temp)) {
+                alert("Please enter a number");
+            } else {
+                $("convertedC").value = convertCF(temp);
+            }
+        };
+        window.onload = function() {
+            $("convertC").onclick = processC();
+            $("convertF").onclick = processF();
+            $("fahrenheit").focus();
+        };    
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Convert temperatures</h1>
+        <label for="fahrenheit">Enter F degrees:</label>
+        <input type="text" id="fahrenheit"><br>
+        <label for="convertedF">Degrees Celsius:</label>
+        <input type="text" id="convertedF" disabled><br>
+        <label>&nbsp;</label>
+        <input type="button" id="convertF" value="Convert"><br>
+        
+        <label for="celsius">Enter C degrees:</label>
+        <input type="text" id="celsius"><br>
+        <label for="convertedC">Degrees Fahrenheit:</label>
+        <input type="text" id="convertedC" disabled><br>
+        <label>&nbsp;</label>
+        <input type="button" id="convertC" value="Convert"><br>
+    </main>
+</body>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
