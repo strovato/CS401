@@ -8,6 +8,15 @@
         var $ = function(id) {
             return document.getElementById(id);
         };
+        function hide1() {
+            $("C").style.display="block";
+            $("F").style.display="none";
+        };
+        
+        function hide2() {
+            $("C").style.display="none";
+            $("F").style.display="block";
+        };
         var convertCF = function (celsius) {
             var fahrenheit = ((celsius * (9/5)) + 32);
             fahrenheit = fahrenheit.toFixed(1);
@@ -37,28 +46,32 @@
         window.onload = function() {
             $("convertC").onclick = processC;
             $("convertF").onclick = processF;
+            $("C").style.display="hide";
             $("fahrenheit").focus();
-        };    
+        }; 
     </script>
 </head>
 <body>
     <main>
         <h1>Convert temperatures</h1>
-        <input type="radio" name="convertdirection" id="text" value="text" checked>Fahrenheit to Celsius<br>
-        <input type="radio" name="convertdirection" id="text" value="text">Celsius to Fahrenheit<br> 
-        <label for="fahrenheit">Enter F degrees:</label>
-        <input type="text" id="fahrenheit"><br>
-        <label for="convertedF">Degrees Celsius:</label>
-        <input type="text" id="convertedF" disabled><br>
-        <label>&nbsp;</label>
-        <input type="button" id="convertF" value="Convert"><br>
-        
-        <label for="celsius">Enter C degrees:</label>
-        <input type="text" id="celsius"><br>
-        <label for="convertedC">Degrees Fahrenheit:</label>
-        <input type="text" id="convertedC" disabled><br>
-        <label>&nbsp;</label>
-        <input type="button" id="convertC" value="Convert"><br>
+        <input type="radio" name="convertdirection" id="text" value="text" onclick="hide2();" checked>Fahrenheit to Celsius<br>
+        <input type="radio" name="convertdirection" id="text" value="text" onclick="hide1();">Celsius to Fahrenheit<br> 
+        <div id="F">
+            <label for="fahrenheit" >Enter F degrees:</label>
+            <input type="text" id="fahrenheit" ><br>
+            <label for="convertedF" >Degrees Celsius:</label>
+            <input type="text" id="convertedF"  disabled><br>
+            <label >&nbsp;</label>
+            <input type="button" id="convertF" value="Convert" ><br>
+        </div>
+        <div id="C" class="hide">
+            <label for="celsius" >Enter C degrees:</label>
+            <input type="text" id="celsius" ><br>
+            <label for="convertedC" >Degrees Fahrenheit:</label>
+            <input type="text" id="convertedC"  disabled><br>
+            <label >&nbsp;</label>
+            <input type="button" id="convertC" value="Convert" ><br>
+        </div>
     </main>
 </body>    
     
